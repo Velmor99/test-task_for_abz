@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding-top: 40px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
+// цвета фона
+$main_color: #ef5b4c;
+$secondary_color: #007bff;
+$bgc_color: #fff;
+$second_bgc_color: #f9f9f3;
+$text: #212529;
+
+// шрифты
+$open_sans: "Open sans", Verdana, sans-serif;

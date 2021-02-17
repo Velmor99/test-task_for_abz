@@ -1,0 +1,139 @@
+@import "../../global.scss";
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  min-width: 320px;
+}
+
+.banner {
+  background-image: url("../../img/banner-photo.jpg");
+  background-repeat: no-repeat;
+  background-position: 52%;
+  background-size: cover;
+  height: 400px;
+  max-width: 100%;
+  min-width: 320px;
+
+  &__grid {
+    height: 400px;
+    min-width: 320px;
+    display: grid;
+    grid-template: 70px 1fr 20px 1fr 24px 1fr 75px/15px 1fr 15px;
+    letter-spacing: 0;
+  }
+
+  &__title {
+    color: $bgc_color;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: $open_sans;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    text-align: center;
+    line-height: 34px;
+  }
+
+  &__tabletText {
+    display: none;
+  }
+
+  &__text {
+    font-family: $open_sans;
+    color: $bgc_color;
+    font-size: 16px;
+    font-weight: 400;
+    grid-row-start: 4;
+    grid-column-start: 2;
+    text-align: center;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+
+  &__button {
+    height: 38px;
+    width: 210px;
+    max-width: 100%;
+    font-family: $open_sans;
+    color: $bgc_color;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: $main_color;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 250ms linear;
+    &:hover {
+      background-color: #d24335;
+      transition: background-color 250ms linear;
+    }
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__button-block {
+    grid-column-start: 2;
+    grid-row-start: 6;
+    justify-self: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner {
+    height: 500px;
+
+    &__text {
+      display: none;
+    }
+
+    &__tabletText {
+      display: block;
+      font-family: $open_sans;
+      color: $bgc_color;
+      font-size: 16px;
+      font-weight: 400;
+      grid-row-start: 4;
+      grid-column-start: 2;
+      text-align: start;
+      line-height: 24px;
+      letter-spacing: 0;
+    }
+
+    &__title {
+      text-align: start;
+      font-size: 40px;
+      line-height: 44px;
+    }
+
+    &__button-block {
+      justify-self: start;
+    }
+
+    &__grid {
+      grid-template: 60px 1fr 28px 1fr 32px 1fr 75px/30px 1fr 240px 30px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner {
+    height: 600px;
+
+    &__title {
+      font-size: 50px;
+      line-height: 54px;
+    }
+
+    &__grid {
+      grid-template: 107px 1fr 26px 1fr 34px 1fr 75px/30px 1fr 16px 430px 30px;
+    }
+
+    &__tabletText {
+      grid-column-end: 4;
+    }
+  }
+}

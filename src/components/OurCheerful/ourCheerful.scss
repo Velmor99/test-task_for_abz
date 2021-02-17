@@ -1,0 +1,131 @@
+@import "../../global.scss";
+
+.ourCheerful {
+  background-color: $second_bgc_color;
+  height: auto;
+  &__grid {
+    display: grid;
+    grid-template: 75px 34px 10px 44px 1fr 48px 116px / 15px 1fr 15px;
+  }
+
+  &__title {
+    font-family: $open_sans;
+    font-size: 30px;
+    font-weight: normal;
+    color: $text;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    justify-self: center;
+  }
+
+  &__text {
+    font-family: $open_sans;
+    font-size: 16px;
+    font-weight: normal;
+    color: $text;
+    line-height: 22px;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    height: auto;
+    justify-self: center;
+  }
+
+  &__users-block {
+    grid-row: 5;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 320px;
+  }
+
+  &__button {
+    background-color: $main_color;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    color: $bgc_color;
+    height: 40px;
+    min-width: 210px;
+    font-family: $open_sans;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 250ms linear;
+
+    &:hover {
+      background-color: #d24335;
+      transition: background-color 250ms linear;
+    }
+
+    &:disabled {
+      display: none;
+    }
+
+    &-block {
+      grid-column-start: 2;
+      grid-row-start: 7;
+      justify-self: center;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .ourCheerful {
+    &__grid {
+      grid-template: 90px 40px 26px 98px 1fr 48px 116px / 30px 1fr 30px;
+    }
+
+    &__users-block {
+      margin: 0 auto;
+      min-width: 708px;
+      width: auto;
+      max-width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      :nth-child(3n) {
+        padding-right: 0;
+      }
+    }
+
+    &__item {
+      width: 30.5%;
+      margin-bottom: 16px;
+    }
+
+    &__title {
+      font-size: 40px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .ourCheerful {
+    &__grid {
+      grid-template: 150px 50px 26px 98px 1fr 126px / 30px 1fr 30px;
+    }
+    &__title {
+      font-size: 50px;
+    }
+    &__item {
+      margin-bottom: 8px;
+    }
+    &__users-block {
+      min-width: 964px;
+      width: auto;
+      max-width: 100%;
+    }
+
+    &__button-block {
+      grid-row: 6;
+    }
+  }
+}

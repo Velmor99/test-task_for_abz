@@ -1,0 +1,126 @@
+@import "../../global.scss";
+
+.container {
+  min-width: 320px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  &__grid {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template: 10px 1fr 10px / 15px 1fr 1fr 15px;
+  }
+
+  &__logo {
+    height: 20px;
+    width: 136px;
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+
+  &__links {
+    display: none;
+  }
+
+  &__button {
+    outline: none;
+    padding: 0;
+    background-color: #fff;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    height: 15px;
+    width: 20px;
+    grid-column-start: 3;
+    justify-self: end;
+    grid-row-start: 2;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    height: 60px;
+    min-width: 768px;
+  }
+
+  .header__grid {
+    grid-template: 20px 1fr 20px / 30px 1fr 1fr 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    height: 60px;
+    min-width: 1024px;
+    max-width: 1170px;
+  }
+
+  .header {
+    &__button {
+      display: none;
+    }
+
+    &__grid {
+      grid-template: 20px 1fr 20px / 30px 1fr 1fr 30px;
+    }
+
+    &__links {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      grid-column-start: 3;
+      grid-row-start: 2;
+    }
+
+    //задал каждой ссылке марджин, в погрешность в 1px по pixel perfect вписался
+    &__link {
+      padding-top: 2px;
+      &:nth-child(-n + 4) {
+        margin-right: 29px;
+      }
+    }
+
+    &__text-active {
+      color: $main_color;
+      font-family: $open_sans;
+      font-size: 14px;
+      font-weight: 400;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        color: $secondary_color;
+        transition: color 300ms;
+      }
+    }
+
+    &__text {
+      font-family: $open_sans;
+      font-size: 14px;
+      font-weight: 400;
+      color: $text;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        color: $secondary_color;
+        transition: color 300ms;
+      }
+    }
+  }
+}
