@@ -98,6 +98,7 @@
     &__text-active {
       color: $main_color;
       font-family: $open_sans;
+      font-display: swap;
       font-size: 14px;
       font-weight: 400;
       cursor: pointer;
@@ -113,6 +114,7 @@
       font-family: $open_sans;
       font-size: 14px;
       font-weight: 400;
+      font-display: swap;
       color: $text;
       cursor: pointer;
       text-decoration: none;

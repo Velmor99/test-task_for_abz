@@ -17,6 +17,7 @@
     grid-row-start: 2;
     grid-column-start: 2;
     grid-column-end: 5;
+    font-display: swap
   }
 
   &__text {
@@ -29,6 +30,7 @@
     grid-row-start: 4;
     grid-column-start: 3;
     grid-column-end: 4;
+    font-display: swap
   }
 
   &__grid-input {
@@ -57,6 +59,7 @@
     line-height: 28px;
     display: inline-block;
     margin-bottom: 6px;
+    font-display: swap
   }
 
   &__input-text {
@@ -87,6 +90,7 @@
       font-size: 12px;
       font-weight: normal;
       color: #f44336;
+      font-display: swap
     }
   }
 
@@ -111,6 +115,7 @@
     font-size: 17px;
     color: $text;
     padding-bottom: 13px;
+    font-display: swap
   }
 
   &__firstPosition {
@@ -147,6 +152,7 @@
     font-size: 16px;
     line-height: 28px;
     color: $text;
+    font-display: swap
   }
 
   &__fileLabel {
@@ -210,6 +216,7 @@
     border: none;
     font-weight: 550;
     font-size: 16px;
+    font-display: swap;
     font-family: $open_sans;
     transition: background-color 300ms linear;
     cursor: pointer;

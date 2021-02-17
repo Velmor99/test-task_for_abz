@@ -7,9 +7,9 @@
     "start": "webpack serve --env production=false --env port=3000",
     "build": "webpack --env production=true",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "production": "netlify deploy -p"
   },
-  "homepage": "https://Velmor99.github.io/[your_repo]",
   "keywords": [],
   "author": "",
   "license": "ISC",

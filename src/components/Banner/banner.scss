@@ -32,6 +32,7 @@
     grid-column-start: 2;
     text-align: center;
     line-height: 34px;
+    font-display: swap
   }
 
   &__tabletText {
@@ -48,6 +49,7 @@
     text-align: center;
     line-height: 24px;
     letter-spacing: 0;
+    font-display: swap
   }
 
   &__button {
@@ -62,6 +64,7 @@
     outline: none;
     border: none;
     border-radius: 4px;
+    font-display: swap;
     cursor: pointer;
     transition: background-color 250ms linear;
     &:hover {

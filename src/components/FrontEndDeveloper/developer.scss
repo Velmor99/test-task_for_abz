@@ -23,6 +23,7 @@
     line-height: 50px;
     color: $text;
     font-weight: normal;
+    font-display: swap;
   }
 
   &__image {
@@ -42,6 +43,7 @@
     font-weight: normal;
     line-height: 30px;
     color: $text;
+    font-display: swap;
   }
 
   &__button {
@@ -49,6 +51,7 @@
     font-family: $open_sans;
     background-color: $bgc_color;
     border: none;
+    font-display: swap;
     outline: none;
     cursor: pointer;
     transition: color 250ms linear;
@@ -79,6 +82,7 @@
     font-weight: normal;
     color: $text;
     justify-self: center;
+    font-display: swap;
   }
 }
 

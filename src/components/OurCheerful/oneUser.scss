@@ -14,6 +14,7 @@
     font-family: $open_sans;
     color: $text;
     font-size: 16px;
+    font-display: swap;
     text-align: center;
     line-height: 24px;
     min-width: 205px;
@@ -31,6 +32,7 @@
     font-weight: normal;
     margin-bottom: 24px;
     max-height: 100%;
+    font-display: swap;
     word-wrap: break-word;
   }
 
