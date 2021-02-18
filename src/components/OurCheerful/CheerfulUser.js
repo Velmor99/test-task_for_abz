@@ -11,7 +11,15 @@ function CheerfulUser({ img, name, profile, number, email }) {
         alt="profile photo"
       ></img>
       <div className="item__text-block">
-        <p className="item__name item__text">{name}</p>
+        <p className="item__name item__text">
+          {name.split(" ").length > 1
+            ? name
+            : name.split("").includes("-", " ")
+            ? name
+            : name.length > 40
+            ? `${name.slice(0, 10)}-${name.slice(10, 20)}-${name.slice(20)}`
+            : name}
+        </p>
         <p className="item__profile item__text">{profile}</p>
         <p
           title={email.length > 20 ? email : ""}
